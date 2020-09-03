@@ -37,7 +37,7 @@ class DistributionMaster:
     def identify_file_type(file):
         match, folder_location = False, ""
         for type, ext in extensions_json.items():
-            current_file_extension = f".{file.split('.')[-1]}"
+            current_file_extension = file.split('.')[-1]
             if current_file_extension in ext:
                 match, folder_location = True, type
 
@@ -52,6 +52,7 @@ class DistributionMaster:
 def move_file_to_folder(file, location):
     file_path = f"{config['locations']['target']}\\{file}"
     shutil.move(file_path, location)
+    logging.info(f"Move successful : {file_path} to {location}")
 
 
 class OnMyWatch:
@@ -118,6 +119,7 @@ class Handler(FileSystemEventHandler):
             logging.info(f"Watchdog received {event.event_type} event - {event.src_path}")
         elif event.event_type != "deleted":
             # Event is created, you can process it now
+            DistributionMaster().distribution_controller()
             logging.info(f"Watchdog received {event.event_type} event - {event.src_path}.")
 
 
@@ -128,7 +130,6 @@ def read_extensions():
 
 
 if __name__ == "__main__":
-    obj = DistributionMaster()
-    obj.distribution_controller()
-    # watch = OnMyWatch()
-    # watch.run()
+
+    watch = OnMyWatch()
+    watch.run()
