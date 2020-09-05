@@ -1,5 +1,6 @@
 # Autonomous File Separator
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/0b4ada47f0df460b8577dbceb70165e0)](https://www.codacy.com/manual/aditya109/auto_file_separator?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=aditya109/auto_file_separator&amp;utm_campaign=Badge_Grade)
+
+[![BCH compliance](https://bettercodehub.com/edge/badge/aditya109/auto_file_separator?branch=master)](https://bettercodehub.com/)
 
 Autonomous File Separator is Python-script which segragates the files under the target directory, classfiying the files based on their extensions.
 
@@ -35,7 +36,7 @@ Autonomous File Separator is Python-script which segragates the files under the 
     target=D:\TEST
     ```
     
-6.  Edit the div-directories field under `locations` section to provide the names of      the categorical directories. [OPTIONAL]
+6.  Edit the div-directories field under `locations` section to provide the names of the categorical directories. [OPTIONAL]
     
     ```
     ; name of categorical directories
@@ -61,4 +62,4 @@ Autonomous File Separator is Python-script which segragates the files under the 
     python bin\start.py
     ```
  
- Have Fun Hacking !
+### Have Fun Hacking ! 
