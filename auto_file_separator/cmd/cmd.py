@@ -1,22 +1,25 @@
 import configparser
 import logging
 import logging.config
-import pprint
 import shutil
 from os import path
 
 import rootpath
 import yaml
 
-pp = pprint.PrettyPrinter(indent=4)
-
 
 class CMD:
+    """
+    Auxillary module to assist the central controllers
+    """
 
     def __init__(self):
+        # getting the project root path
         self.path = rootpath.detect()
-        logging.config.fileConfig(fname=f"{self.path}\\data\\log.conf")
+        # initiatiating the logger object
+        logging.config.fileConfig(fname=f"{self.path}\\data\\static\\log.conf")
         self.logger = logging.getLogger('dev')
+        # reading the config from static config file
         self.config = configparser.ConfigParser()
         self.config.read(f'{self.path}\\data\\default_config.ini')
 
@@ -60,7 +63,7 @@ class CMD:
         Function returns dictionary of extensions, reading it from the yaml file
         :return: dict
         """
-        with open(f'{self.path}\\data\\default_extensions.yml', 'r') as config_yaml_file:
+        with open(f'{self.path}\\data\\static\\default_extensions.yml', 'r') as config_yaml_file:
             default_extensions = yaml.load(config_yaml_file, Loader=yaml.FullLoader)
             return default_extensions
 

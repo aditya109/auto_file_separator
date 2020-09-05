@@ -1,0 +1,9 @@
+---
+engines:
+  duplication:
+    enabled: true
+    exclude_paths:
+      - 'tests/**'
+exclude_paths:
+  - '**/tests/**'
+  - '*\__init__.py'

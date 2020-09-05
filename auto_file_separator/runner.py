@@ -1,5 +1,6 @@
 from auto_file_separator.controller.controller import DirectoryWatchController
 
-if __name__ == '__main__':
+
+def main():
     directoryWatchController = DirectoryWatchController()
     directoryWatchController.run()
