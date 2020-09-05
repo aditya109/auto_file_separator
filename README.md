@@ -1,0 +1,2 @@
+# auto_file_separator
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e2952210a8274442a49c6e9abbdd1909)](https://app.codacy.com/manual/aditya109/auto_file_separator?utm_source=github.com&utm_medium=referral&utm_content=aditya109/auto_file_separator&utm_campaign=Badge_Grade_Dashboard)
