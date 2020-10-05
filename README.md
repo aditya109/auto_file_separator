@@ -1,7 +1,7 @@
 # Autonomous File Separator
 
 [![BCH compliance](https://bettercodehub.com/edge/badge/aditya109/auto_file_separator?branch=master)](https://bettercodehub.com/)
-
+## What is Autonomous File Separator?🙄👇
 Autonomous File Separator is Python-script which segragates the files under the target directory, classfiying the files based on their extensions.
 
 ## Quick Start
